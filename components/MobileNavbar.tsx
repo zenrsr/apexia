@@ -38,10 +38,10 @@ const MobileNavbar = ({ user }: MobileNavProps) => {
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="horizon logo"
+              alt="Apexia logo"
             />
             <h1 className="text-26  font-ibm-plex-serif font-bold text-black-1">
-              Horizon
+              Apexia
             </h1>
           </Link>
 
