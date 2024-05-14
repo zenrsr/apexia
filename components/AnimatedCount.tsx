@@ -5,7 +5,7 @@ import React from "react";
 const AnimatedCount = ({ amount }: { amount: number }) => {
   return (
     <div className="w-full">
-      ₹ <CountUp decimal="." decimals={3} prefix="INR " end={amount} />
+      ₹ <CountUp decimal="." decimals={2} end={amount} />
     </div>
   );
 };

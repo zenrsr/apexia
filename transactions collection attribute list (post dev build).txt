@@ -1,0 +1,9 @@
+name string
+amount string
+channel string
+category string
+senderId string
+receiverId string
+senderBankId string
+receiverBankId string
+email string

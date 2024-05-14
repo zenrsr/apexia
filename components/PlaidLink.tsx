@@ -10,6 +10,7 @@ import {
   createLinkToken,
   exchangePublicToken
 } from "@/lib/actions/user.actions";
+import Image from "next/image";
 
 const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
   const router = useRouter();
@@ -19,8 +20,10 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
   useEffect(() => {
     const getLinkToken = async () => {
       const data = await createLinkToken(user);
-      setToken(data?.token);
+
+      setToken(data?.linkToken);
     };
+
     getLinkToken();
   }, [user]);
 
@@ -30,8 +33,10 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
         publicToken: public_token,
         user
       });
+
       router.push("/");
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [user]
   );
 
@@ -53,9 +58,36 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
           Connect to Bank
         </Button>
       ) : variant === "ghost" ? (
-        <Button>Connect Bank</Button>
+        <Button
+          variant="ghost"
+          className="plaidlink-ghost "
+          onClick={() => open()}
+        >
+          <Image
+            src="/icons/connect-bank.svg"
+            alt="connect bank"
+            width={24}
+            height={24}
+          />
+
+          <p className="hidden text-[15px] font-semibold text-black-2 xl:block">
+            Connect Bank
+          </p>
+        </Button>
       ) : (
-        <Button>Connect Bank</Button>
+        <Button
+          className="plaidlink-default text-blue-900"
+          onClick={() => open()}
+        >
+          <Image
+            src="/icons/connect-bank.svg"
+            alt="connect bank"
+            width={24}
+            height={24}
+          />
+
+          <p className="text-[15px] font-semibold text-black-2">Connect Bank</p>
+        </Button>
       )}
     </>
   );
