@@ -70,7 +70,7 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
             height={24}
           />
 
-          <p className="hidden text-[15px] font-semibold text-black-2 xl:block">
+          <p className="hidden text-[15px] font-semibold text-black-2 xl:block sidebar-label">
             Connect Bank
           </p>
         </Button>
@@ -86,7 +86,9 @@ const PlaidLink = ({ user, variant }: PlaidLinkProps) => {
             height={24}
           />
 
-          <p className="text-[15px] font-semibold text-black-2">Connect Bank</p>
+          <p className="text-[15px] font-semibold text-black-2 sidebar-label">
+            Connect Bank
+          </p>
         </Button>
       )}
     </>

@@ -20,9 +20,6 @@ const Footer = ({ user, type = "desktop" }: FooterProps) => {
         <h1 className="text-14  font-semibold text-gray-700">
           {user?.firstName}
         </h1>
-        <p className="text-14 hidden max-w-full truncate font-normal text-gray-600 2xl:block">
-          {user?.email}
-        </p>
       </div>
       <div className="footer_image" onClick={handleLogOut}>
         <Image src="icons/logout.svg" alt="user icon" fill />

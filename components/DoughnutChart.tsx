@@ -18,7 +18,7 @@ const DoughnutChart = ({ accounts }: DoughnutChartProps) => {
         backgroundColor: ["#0747b6", "#2265d8", "#2f91fa"]
       }
     ],
-    labels: ["SBI", "Federal", "PNB"]
+    labels: ["Plaid Checking", "Plaid Savings", "Plaid Credits"]
   };
   return (
     <Doughnut
